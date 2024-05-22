@@ -1,5 +1,8 @@
 {
   "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-18",
-  "postCreateCommand": "apt-get update && apt-get install -y imagemagick jq",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+  },
+  "postCreateCommand": "apt-get update && apt-get install -y imagemagick jq nginx && curl -fsSL https://get.docker.com | sh",
   "postStartCommand": "npm install && npm start"
 }

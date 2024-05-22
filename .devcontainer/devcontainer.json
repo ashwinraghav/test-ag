@@ -3,6 +3,6 @@
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:1": {}
   },
-  "postCreateCommand": "apt-get update && apt-get install -y imagemagick jq nginx && curl -fsSL https://get.docker.com | sh",
+  "postCreateCommand": "apt-get update && apt-get install -y build-essential git curl wget vim nano zip unzip htop tmux openssh-client net-tools nmap openssl python3 python3-pip nodejs npm ruby ruby-dev openjdk-11-jdk postgresql mysql-server sqlite3 docker.io docker-compose jq imagemagick ffmpeg rsync tree nginx && curl -fsSL https://get.docker.com | sh",
   "postStartCommand": "npm install && npm start"
 }
